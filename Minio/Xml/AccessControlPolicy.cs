@@ -22,12 +22,15 @@ namespace Minio.Xml
 {
     [Serializable]
     [XmlRoot(ElementName = "AccessControlPolicy", Namespace = "http://s3.amazonaws.com/doc/2006-03-01/")]
+    [XmlInclude(typeof(Owner))]
     [XmlInclude(typeof(Grant))]
     [XmlInclude(typeof(GranteeUser))]
     public class AccessControlPolicy
     {
+        [XmlElement(typeof(Owner), ElementName ="Owner")]
+        public Owner owner { get; set; }
         [XmlArray("AccessControlList")]
         [XmlArrayItem(typeof(Grant))]
-        public List<Grant> Grants { get; }
+        public List<Grant> Grants { get; set; }
     }
 }

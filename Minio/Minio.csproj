@@ -99,6 +99,7 @@
     <Compile Include="Xml\ListBucketResult.cs" />
     <Compile Include="Xml\ListMultipartUploadsResult.cs" />
     <Compile Include="Xml\ListPartsResult.cs" />
+    <Compile Include="Xml\Owner.cs" />
     <Compile Include="Xml\Part.cs" />
     <Compile Include="Xml\Prefix.cs" />
     <Compile Include="Xml\Upload.cs" />
